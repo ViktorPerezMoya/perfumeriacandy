@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Administracion Candy</title>
+        <?php
+        echo $this->headLink()
+                ->prependStylesheet($this->baseUrl() . '/css/paper.css')
+//                ->prependStylesheet($this->baseUrl() . '/css/ckeditor/neo.css')
+                ->prependStylesheet($this->baseUrl() . '/css/administracion.css');
+
+        echo $this->headScript()
+                ->appendFile($this->baseUrl() . '/js/jquery/jquery-1.11.2.min.js')
+                ->appendFile($this->baseUrl() . '/js/bootstrap.js')
+                ->appendFile($this->baseUrl() . '/ckeditor/ckeditor.js');
+//                ->appendFile($this->baseUrl() . '/js/jquery/jquery-ui.js');
+        ?>
+
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+
+        <header>
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="<?php echo $this->url(array('controller'=>'index','action'=>'index')); ?>">Administración</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Productos <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="<?php echo $this->url(array('controller'=>'perfumes','action'=>'index')); ?>">Perfumes</a></li>
+                                    <li><a href="<?php echo $this->url(array('controller'=>'otros-productos','action'=>'index')); ?>">Otro producto</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Información <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="<?php echo $this->url(array('controller'=>'secciones','action'=>'acerca-de')); ?>">Acerca de</a></li>
+                                    <li><a href="<?php echo $this->url(array('controller'=>'secciones','action'=>'contacto')); ?>">Contacto</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="<?php echo $this->url(array('controller'=>'login','action'=>'salir')); ?>">Salir</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section>
+            <?php echo $this->layout()->content; ?>
+        </section>
+
+    </body>
+</html>

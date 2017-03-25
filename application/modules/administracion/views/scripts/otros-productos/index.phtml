@@ -1,0 +1,101 @@
+<div class="col-md-2"></div>
+<div id="resultado"></div>
+<div class="col-md-8">
+    <a class=" btn btn-info" href="<?php echo $this->url(array('controller' => 'otros-productos', 'action' => 'nuevo')); ?>">Nuevo Producto</a>
+    <div class="botones_filtrado">
+        <select id="cbx_categorias">
+            <?php
+            foreach ($this->categorias as $c):
+                ?>
+            <option value="<?php echo $c['categoria']; ?>"><?php echo $c['categoria']; ?></option>
+                <?php
+            endforeach;
+            ?>
+        </select>
+        <input type="button" id="btn_buscar" value="Buscar" class="btn btn-primary">
+    </div>
+    <table class="table table-bordered table-striped table-hover tabla-perfumes" id="tabla"> 
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Precio</th>
+                <th>Categoría</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+                <th>Cambiar Imagen</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $p = new My\Entity\Articulo();
+            foreach ($this->productos as $p):
+                ?>
+                <tr>
+                    <td><?php echo $p->getNombre(); ?></td>
+                    <td><?php echo $p->getDescripcion(); ?></td>
+                    <td><?php echo $p->getPrecio(); ?>$</td>
+                    <td><?php echo $p->getCategoria(); ?></td>
+                    <td><a href="<?php echo $this->url(array('controller' => 'otros-productos', 'action' => 'editar', 'id' => $p->getId())); ?>" class="glyphicon glyphicon-edit"></a></td>
+                    <td><a href="<?php echo $this->url(array('controller' => 'otros-productos', 'action' => 'borrar', 'id' => $p->getId())); ?>" class="glyphicon glyphicon-remove"></a></td>
+                    <td><a href="<?php echo $this->url(array('controller' => 'otros-productos', 'action' => 'cambiar-imagen', 'id' => $p->getId())); ?>" class="glyphicon glyphicon-picture"></a></td>
+                </tr>
+                <?php
+            endforeach;
+            ?>
+        </tbody>
+    </table>
+</div>
+<div class="col-md-2"></div>
+<script type="text/javascript">
+    $(function () {
+
+        $("#btn_buscar").click(function () {
+            var parametro = $("#cbx_categorias").val();
+
+            actualizarTabla(parametro);
+
+        });
+
+        function actualizarTabla(parametro) {
+            var cadenaHtml = "<thead>\n\
+                                    <tr>\n\
+                                        <th>Nombre</th>\n\
+                                        <th>Descripcion</th>\n\
+                                        <th>Precio</th>\n\
+                                        <th>Categoría</th>\n\
+                                        <th>Editar</th>\n\
+                                        <th>Eliminar</th>\n\
+                                        <th>Cambiar Imagen</th>\n\
+                                    </tr>\n\
+                                </thead>\n\
+                                <tbody>";
+
+            $.ajax({
+                url: 'http://localhost/perfumeriaabril/public/administracion/perfumes/consulta/categoria/' + parametro,
+                type: 'post',
+                success: function (data, textStatus, jqXHR) {
+//                    $("#resultado").html('{"Perfume":' + data.toString() + '}');
+                    var dJson = JSON.parse('{"Producto":' + data.toString() + '}');
+
+                    for (var i = 0; i < dJson.Producto.length; i++) {
+                        cadenaHtml = cadenaHtml + "<tr>\n\
+                                                        <td>" + dJson.Producto[i].nombre + "</td>\n\
+                                                        <td>" + dJson.Producto[i].descripcion + "</td>\n\
+                                                        <td>" + dJson.Producto[i].precio + "</td>\n\
+                                                        <td>" + dJson.Producto[i].categoria + "</td>\n\
+                                                        <td><a href='http://localhost/perfumeriaabril/public/administracion/perfumes/editar/id/" + dJson.Producto[i].id + "'  class='glyphicon glyphicon-edit'><a></td>\n\
+                                                        <td><a href='http://localhost/perfumeriaabril/public/administracion/perfumes/borrar/id/" + dJson.Producto[i].id + "'  class='glyphicon glyphicon-remove'><a></td>\n\
+                                                        <td><a href='http://localhost/perfumeriaabril/public/administracion/perfumes/cambiar-imagen/id/" + dJson.Producto[i].id + "'  class='glyphicon glyphicon-picture'><a></td>\n\
+                                                    </tr>";
+                    }
+
+                    cadenaHtml = cadenaHtml + "</tbody></table>";
+
+                    $("#tabla").html(cadenaHtml);
+
+                }
+            });
+        }
+    });
+</script>

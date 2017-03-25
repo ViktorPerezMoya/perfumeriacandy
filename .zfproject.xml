@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<projectProfile type="default" version="1.12.8">
+  <projectDirectory>
+    <projectProfileFile filesystemName=".zfproject.xml"/>
+    <applicationDirectory classNamePrefix="Application_">
+      <configsDirectory>
+        <applicationConfigFile type="ini"/>
+      </configsDirectory>
+      <controllersDirectory>
+        <controllerFile controllerName="Index">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Error"/>
+      </controllersDirectory>
+      <formsDirectory enabled="false"/>
+      <layoutsDirectory>
+        <layoutScriptsDirectory>
+          <layoutScriptFile layoutName="layout"/>
+        </layoutScriptsDirectory>
+      </layoutsDirectory>
+      <modelsDirectory/>
+      <modulesDirectory>
+        <moduleDirectory moduleName="default">
+          <configsDirectory enabled="false"/>
+          <controllersDirectory>
+            <controllerFile controllerName="Index">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Productos">
+              <actionMethod actionName="index"/>
+              <actionMethod actionName="perfumes"/>
+              <actionMethod actionName="perfumesHombres"/>
+              <actionMethod actionName="perfumesNinos"/>
+              <actionMethod actionName="perfumesBebes"/>
+            </controllerFile>
+            <controllerFile controllerName="Contacto">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Acercade">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Varios">
+              <actionMethod actionName="index"/>
+              <actionMethod actionName="consulta"/>
+            </controllerFile>
+          </controllersDirectory>
+          <formsDirectory enabled="false"/>
+          <layoutsDirectory enabled="false">
+            <layoutScriptsDirectory enabled="false"/>
+          </layoutsDirectory>
+          <modelsDirectory/>
+          <servicesDirectory enabled="false"/>
+          <viewsDirectory>
+            <viewScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Index">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Productos">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Productos">
+                <viewScriptFile forActionName="perfumes"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Productos">
+                <viewScriptFile forActionName="perfumesHombres"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Productos">
+                <viewScriptFile forActionName="perfumesNinos"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Productos">
+                <viewScriptFile forActionName="perfumesBebes"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Contacto">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Acercade">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Varios">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Varios">
+                <viewScriptFile forActionName="consulta"/>
+              </viewControllerScriptsDirectory>
+            </viewScriptsDirectory>
+            <viewHelpersDirectory/>
+            <viewFiltersDirectory/>
+          </viewsDirectory>
+        </moduleDirectory>
+        <moduleDirectory moduleName="administracion">
+          <configsDirectory enabled="false"/>
+          <controllersDirectory>
+            <controllerFile controllerName="Login">
+              <actionMethod actionName="index"/>
+              <actionMethod actionName="salir"/>
+            </controllerFile>
+            <controllerFile controllerName="Index">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Perfumes">
+              <actionMethod actionName="index"/>
+              <actionMethod actionName="editar"/>
+              <actionMethod actionName="borrar"/>
+              <actionMethod actionName="nuevo"/>
+              <actionMethod actionName="cambiarImagen"/>
+              <actionMethod actionName="consulta"/>
+            </controllerFile>
+            <controllerFile controllerName="OtrosProductos">
+              <actionMethod actionName="index"/>
+              <actionMethod actionName="editar"/>
+              <actionMethod actionName="borrar"/>
+              <actionMethod actionName="cambiarImagen"/>
+              <actionMethod actionName="nuevo"/>
+            </controllerFile>
+            <controllerFile controllerName="Secciones">
+              <actionMethod actionName="index"/>
+              <actionMethod actionName="acercaDe"/>
+              <actionMethod actionName="contacto"/>
+            </controllerFile>
+          </controllersDirectory>
+          <formsDirectory>
+            <formFile formName="Login"/>
+            <formFile formName="Perfume"/>
+            <formFile formName="Articulo"/>
+            <formFile formName="ArticuloEditarDatos"/>
+            <formFile formName="AcercaDe"/>
+            <formFile formName="Contacto"/>
+          </formsDirectory>
+          <layoutsDirectory enabled="false">
+            <layoutScriptsDirectory enabled="false"/>
+          </layoutsDirectory>
+          <modelsDirectory/>
+          <servicesDirectory enabled="false"/>
+          <viewsDirectory>
+            <viewScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Login">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Index">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Perfumes">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Perfumes">
+                <viewScriptFile forActionName="editar"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Perfumes">
+                <viewScriptFile forActionName="borrar"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Perfumes">
+                <viewScriptFile forActionName="nuevo"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Perfumes">
+                <viewScriptFile forActionName="cambiarImagen"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Perfumes">
+                <viewScriptFile forActionName="consulta"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="OtrosProductos">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="OtrosProductos">
+                <viewScriptFile forActionName="editar"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="OtrosProductos">
+                <viewScriptFile forActionName="borrar"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="OtrosProductos">
+                <viewScriptFile forActionName="cambiarImagen"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="OtrosProductos">
+                <viewScriptFile forActionName="nuevo"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Secciones">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Secciones">
+                <viewScriptFile forActionName="acercaDe"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Secciones">
+                <viewScriptFile forActionName="contacto"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Login">
+                <viewScriptFile forActionName="salir"/>
+              </viewControllerScriptsDirectory>
+            </viewScriptsDirectory>
+            <viewHelpersDirectory/>
+            <viewFiltersDirectory/>
+          </viewsDirectory>
+        </moduleDirectory>
+      </modulesDirectory>
+      <servicesDirectory enabled="false"/>
+      <viewsDirectory>
+        <viewScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Error">
+            <viewScriptFile forActionName="error"/>
+          </viewControllerScriptsDirectory>
+        </viewScriptsDirectory>
+        <viewHelpersDirectory/>
+        <viewFiltersDirectory enabled="false"/>
+      </viewsDirectory>
+      <bootstrapFile filesystemName="Bootstrap.php"/>
+    </applicationDirectory>
+    <dataDirectory enabled="false">
+      <cacheDirectory enabled="false"/>
+      <searchIndexesDirectory enabled="false"/>
+      <localesDirectory enabled="false"/>
+      <logsDirectory enabled="false"/>
+      <sessionsDirectory enabled="false"/>
+      <uploadsDirectory enabled="false"/>
+    </dataDirectory>
+    <docsDirectory>
+      <file filesystemName="README.txt"/>
+    </docsDirectory>
+    <libraryDirectory>
+      <zfStandardLibraryDirectory enabled="false"/>
+    </libraryDirectory>
+    <publicDirectory>
+      <publicStylesheetsDirectory enabled="false"/>
+      <publicScriptsDirectory enabled="false"/>
+      <publicImagesDirectory enabled="false"/>
+      <publicIndexFile filesystemName="index.php"/>
+      <htaccessFile filesystemName=".htaccess"/>
+    </publicDirectory>
+    <projectProvidersDirectory enabled="false"/>
+    <temporaryDirectory enabled="false"/>
+    <testsDirectory>
+      <testPHPUnitConfigFile filesystemName="phpunit.xml"/>
+      <testPHPUnitBootstrapFile filesystemName="bootstrap.php"/>
+      <testApplicationDirectory>
+        <testApplicationControllerDirectory>
+          <testApplicationControllerFile forControllerName="Index"/>
+        </testApplicationControllerDirectory>
+      </testApplicationDirectory>
+      <testLibraryDirectory/>
+    </testsDirectory>
+  </projectDirectory>
+</projectProfile>

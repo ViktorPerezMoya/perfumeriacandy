@@ -1,0 +1,348 @@
+body{
+    background: -webkit-linear-gradient(pink, white);
+    background-repeat: no-repeat;
+    font-family: 'Indie Flower', cursive;
+    -webkit-perspective: 800px;
+}
+
+img{
+    max-width: 100%;
+}
+.contenedor{
+    margin-top: 10px;
+}
+.quitar-float{
+    float: none;
+}
+
+.perfume-principal{
+    max-width: 450px;
+    max-height: 400px
+}
+
+/*h1{
+    font-family: 'Lobster', cursive;
+}*/
+h2{
+    font-family: 'Dancing Script', cursive;
+    color: #DC6584;
+}
+h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    color: #DE4980;
+}
+/* Menu DE PAGINA PRICIPAL*/
+nav.menu-principal{
+    margin-top: 20px;
+}
+nav.menu-principal > a{
+    margin-left: .5em;
+    margin-right: .5em;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+
+    transition-property: background;
+    transition-duration: .4s;
+    transition-timing-function: linear;
+}
+
+nav.menu-principal > a:hover{
+    border-style: solid;
+    border-width: 1px;
+    background: #BED6F2;/*-webkit-linear-gradient(#F25ABB , transparent);*/
+
+
+}
+
+.inline-block{
+    float: none;
+    display: inline-block;
+    margin-right:  -4px;
+}
+
+/*  MENU del layout */
+.menu-ul{
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-top: 1px;
+    width: 100%;
+    background: #F29FBB;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.menu-ul > li{
+    background: #F29FBB;
+    padding: 10px;
+    text-decoration: none;
+
+    transition-property: background;
+    transition-duration: .4s;
+}
+.menu-ul > li:hover{
+    background: #DE4980;
+}
+
+.menu-ul > li:hover > a{
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+}
+
+img.producto{
+    width: 255px;
+    height: 256px;
+}
+
+.thumbnail{
+    background-color: #F2E7D3;
+}
+
+.header{
+    height: 150px;
+    width: 100%;
+    background-image: url(../img/header_rosas.png);
+
+}
+
+/* SUBMENU */
+
+.menu-ul li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+    list-style: none;
+    padding:5px;
+
+}
+
+.menu-ul li:hover > ul {
+    display:block;
+    margin-top: 10px;
+    margin-left: 30%;
+    background-color: #F29FBB;
+    z-index: 2;
+}
+
+.menu-ul li ul li {
+    position:relative;
+    padding: 5px;
+
+    transition-property: background;
+    transition-duration: .5s;
+
+}
+
+.menu-ul li ul li:hover{
+    background: #DE4980;
+}
+.menu-ul li ul li:hover a{
+    text-decoration: none;
+    color: white;
+}
+
+center > h1{
+    margin: 30px;
+}
+
+.portadas-perfumes{
+    float: none;
+}
+.portadas-perfumes > center > a > img{
+    width: 185px;
+    height: 256px;
+    transition: all 1s ease;
+
+}
+.portadas-perfumes > center > a > img:hover{
+    /*-webkit-transform: rotate(1turn);*/
+    /*-webkit-transform: scale(1.5);*/
+
+    -webkit-animation-name: sacudirimagen;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+}
+
+
+@-webkit-keyframes sacudirimagen{
+    9%{-webkit-transform: rotate(10deg);}
+    18%{-webkit-transform: rotate(25deg);}
+    27%{-webkit-transform: rotate(45deg);}
+    36%{-webkit-transform: rotate(25deg);}
+    45%{-webkit-transform: rotate(10deg);}
+    54%{-webkit-transform: rotate(-10deg);}
+    63%{-webkit-transform: rotate(-25deg);}
+    72%{-webkit-transform: rotate(-45deg);}
+    81%{-webkit-transform: rotate(-25deg);}
+    90%{-webkit-transform: rotate(-10deg);}
+    100%{-webkit-transform: rotate(0deg);}
+}
+
+
+.pose1{
+    -webkit-transform: rotate(10deg);
+}
+.pose2{
+    -webkit-transform: rotate(-15deg);
+}
+.pose3{
+    -webkit-transform: rotate(8deg);
+}
+.pose4{
+    -webkit-transform: rotate(40deg);
+}
+
+
+
+
+
+
+
+
+/*cuando la pagina es en celular cambian algunas cosas anterirormete dichas*/
+
+@media screen and (max-width: 1000px) {
+    div > div > div > div.caption > h3{
+        font-size: 3em;
+    }div > div > div > div.caption > p{
+        font-size: 2.5em;
+    }
+    center > h1{
+        font-size: 5em;
+    }
+
+    /*    MENU RESPONSIVO  */
+
+    /*  MENU */
+    .menu-ul{
+        font-size: 3em;
+        width: 100%;
+        background: #F29FBB;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .menu-ul > li{
+        background: #F29FBB;
+        padding: 10px;
+        text-decoration: none;
+
+        transition-property: background;
+        transition-duration: .4s;
+    }
+    .menu-ul > li:hover{
+        background: #DE4980;
+        border-radius: .5em;
+    }
+
+
+    .menu-ul > li:hover > a{
+        text-decoration: none;
+    }
+
+
+    /* SUBMENU */
+
+    .menu-ul li ul {
+        display:none;
+        position:absolute;
+        min-width:7em;
+        list-style: none;
+        padding:5px;
+        border-radius: .3em;
+
+    }
+
+    .menu-ul li:hover > ul {
+        display:block;
+        margin-top: .24em;
+        margin-left: 0%;
+        background-color: #F29FBB;
+        border-radius: .3em;
+        z-index: 2;
+    }
+
+    .menu-ul li ul li {
+        position:relative;
+        padding: 5px;
+
+        transition-property: background;
+        transition-duration: .5s;
+
+    }
+
+    .menu-ul li ul li:hover{
+        background: #DE4980;
+    }
+    .menu-ul li ul li:hover a{
+        text-decoration: none;
+        color: white;
+    }
+
+    /* fin de SUBMENU*/
+
+    .flotar-imagen{
+        float: right;
+    }
+
+    .perfume-principal{
+        max-width: 100%;
+        max-height: 100%;
+        margin-top: 30%;
+    }
+    .titulo-portada{
+        font-size: 7em;
+    }
+    .subtitulo-portada{
+        font-size: 5em;
+    }
+
+    nav.menu-principal{
+        font-size: 2.3em;
+    }
+
+
+
+
+
+
+    .fb-page{
+        margin-top: 4em;
+    }
+}
+
+#titulo-contacto{
+    margin-top: 1em;
+    font-size: 4em;
+}
+
+#info-contacto{
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.flotar-imagen{
+    float: left;
+    width: 200px;
+    height: 300px;
+}
+
+.fb-like{
+    margin: 2em;
+    padding: 1em;
+    border-radius: 3px;
+    background: #F29FBB;
+}
+
+.fb-page{
+    padding-top: 5em;
+}
+
+.botones_filtrado{
+    padding-bottom: 2em;
+}

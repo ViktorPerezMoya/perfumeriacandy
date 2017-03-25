@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Candy</title>
+        <link rel="stylesheet" href="<?php echo $this->baseUrl() . '/css/bootstrap.css'; ?>">
+        <link rel="stylesheet" href="<?php echo $this->baseUrl() . '/css/misestilos.css'; ?>">
+        
+        <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="<?php echo $this->baseUrl() . '/js/jquery/jquery-1.11.2.min.js'?>"></script>
+    </head>
+    <body>
+
+        <div id="fb-root"></div>
+        <script>(function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.5";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+
+        <div class="col-md-8 center-block text-center quitar-float">
+            <nav class="menu">
+                <div class="header">
+
+                </div>
+                <!--<img src="img/bebe-tierno2.png">-->
+                <ul class="menu-ul">
+                    <li class="col-md-2 inline-block"><a href="<?php echo $this->url(array('controller' => 'index', 'action' => 'index')); ?>">Baby's</a></li>
+                    <li class="col-md-2 inline-block"><a href="#">Productos</a>
+                        <ul>
+                            <li><a href="<?php echo $this->url(array('controller' => 'productos', 'action' => 'index')); ?>">Perfumes</a></li>
+                           <li><a href="<?php echo $this->url(array('controller' => 'varios', 'action' => 'index')); ?>">Varios</a></li>
+                        </ul>
+                    </li>
+                    <li class="col-md-2 inline-block"><a href="<?php echo $this->url(array('controller' => 'contacto', 'action' => 'index')); ?>">Contacto</a></li>
+                    <li class="col-md-2 inline-block"><a href="<?php echo $this->url(array('controller' => 'acercade', 'action' => 'index')); ?>">Acerca de</a></li>
+                </ul>
+
+            </nav>
+
+        </div>
+
+        <section>
+            <?php echo $this->layout()->content; ?>
+        </section>
+        <footer>
+            
+            <center>
+                <div class="fb-like" data-href="https://www.facebook.com/Perfumeria-Candy-788572481276039" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+            </center>
+        </footer>
+    </body>
+</html>

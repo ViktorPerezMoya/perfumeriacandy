@@ -1,0 +1,26 @@
+
+
+<!-- PLUGIN DE PUBLICACIONES-->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="col-md-6 col-sm-12 col-xs-8 center-block text-center contenedor quitar-float">
+    <img src="img/perfume.png" class="perfume-principal">
+    <h1 class="titulo-portada">Perfumeria Candy</h1>
+    <h2 class="subtitulo-portada">Todo para ti al alcance de tu mano..</h2>
+    <nav class="menu-principal">
+        <a href="<?php echo $this->url(array('controller' => 'productos', 'action' => 'index')); ?>">Perfumes</a>
+        <a href="<?php echo $this->url(array('controller' => 'varios', 'action' => 'index')); ?>">Articulos varios</a>
+        <a href="<?php echo $this->url(array('controller' => 'contacto', 'action' => 'index')); ?>">Contacto</a>
+        <a href="<?php echo $this->url(array('controller' => 'acercade', 'action' => 'index')); ?>">Acerca de</a>
+    </nav>
+    
+    <div class="fb-page" data-href="https://www.facebook.com/Perfumeria-Candy-788572481276039" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+</div>

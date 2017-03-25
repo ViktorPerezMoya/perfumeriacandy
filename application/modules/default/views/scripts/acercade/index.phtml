@@ -1,0 +1,16 @@
+<div class="col-md-8 col-sm-12 col-xs-12 quitar-float center-block">
+    <!--<img src="<?php // echo $this->baseUrl() . '/img/nosotros.jpg'  ?>" class="thumbnail flotar-imagen">-->
+    <?php
+    $sec = new My\Entity\Seccione();
+    $sec = $this->seccion;
+    ?>
+    <h2 id="titulo-presentacion" ><?php echo $sec->getTitulo(); ?></h2>
+
+    <div id="">
+        <center>
+            <?php echo $sec->getContenido(); ?>
+        </center>
+    </div>
+
+<!--<p id="presentacion">Soy una profecional en ascesoramiento de imagen, con basta experiencia en mercado tecnia y venta de productos. A lo largo de mi vida profecional he trabajado en importantes empresas de nombre reconocido, en las cuales logre aprender mucho de cada una. Decidi habrir mi propio emprendimiento con el objetivo de brindarle a usted la mejor calidad de perfumes junto a la mejor atencion a la hora de elegir lo que comprara.</p>-->
+</div>
